@@ -1,0 +1,7 @@
+name: QChat
+main: quietw.qchat.QChat
+version: 1.0
+commands:
+  chat:
+    aliases:
+      - c

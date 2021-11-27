@@ -1,0 +1,4 @@
+globalChatFormat: "&6G &f> %player > %message"
+localChatFormat: "%player > %message"
+# X - localChatRadius & Y = localChatRadius
+localChatRadius: 50
