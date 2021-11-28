@@ -6,12 +6,14 @@ import quietw.qchat.Chat.ChatGlobal;
 import quietw.qchat.Chat.Chats;
 import quietw.qchat.Commands.ChatCommand;
 import quietw.qchat.Chat.ChatLocal;
+import quietw.qchat.Commands.TabComplete;
 import quietw.qchat.Database.DBEditor;
 
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.logging.Logger;
 
 public class QChat extends JavaPlugin {
@@ -27,6 +29,7 @@ public class QChat extends JavaPlugin {
         new ChatCommand();
         new ChatGlobal();
         new ChatLocal();
+        Objects.requireNonNull(getCommand("chat")).setTabCompleter(new TabComplete());
         Bukkit.getServer().getPluginManager().registerEvents(new EventHandler(), this);
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:" + (getDataFolder() + File.separator + "data.db"));
