@@ -21,8 +21,12 @@ public class Chats {
         instance = this;
     }
 
-    public ArrayList<Chat> getList() {
-        return list;
+    public String getChatNames() {
+        ArrayList<String> names = new ArrayList<>();
+        for(Chat chat : list) {
+            names.add(chat.getName());
+        }
+        return String.join(", ", names).toUpperCase();
     }
 
 }

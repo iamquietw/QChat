@@ -5,7 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import quietw.qchat.Chat.ChatGlobal;
 import quietw.qchat.Chat.Chats;
 import quietw.qchat.Commands.ChatCommand;
-import quietw.qchat.Commands.ChatLocal;
+import quietw.qchat.Chat.ChatLocal;
 import quietw.qchat.Database.DBEditor;
 
 import java.io.File;
@@ -22,7 +22,6 @@ public class QChat extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Logger logger = Bukkit.getServer().getLogger();
         instance = this;
         new Chats();
         new ChatCommand();

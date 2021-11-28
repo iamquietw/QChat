@@ -1,10 +1,8 @@
-package quietw.qchat.Commands;
+package quietw.qchat.Chat;
 
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import quietw.qchat.Chat.AsyncLocalTask;
-import quietw.qchat.Chat.Chat;
 import quietw.qchat.QChat;
 
 import java.util.Objects;

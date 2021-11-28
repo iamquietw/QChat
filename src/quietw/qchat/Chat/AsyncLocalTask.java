@@ -1,5 +1,6 @@
 package quietw.qchat.Chat;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -35,6 +36,9 @@ public class AsyncLocalTask extends BukkitRunnable {
                             .replace("&", "§"));
                 }
             }
+        }
+        if(receivers.size() <= 1) {
+            player.sendMessage(ChatColor.RED + "Никто тебя не услышал. Используй Глобальный чат чтобы все увидели твоё сообщение. " + ChatColor.BOLD + "/chat global");
         }
     }
 }
